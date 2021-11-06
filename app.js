@@ -732,7 +732,7 @@ app.get('/api/history', (req,res)=>{
   res.setHeader('Content-Type', 'application/json');
   res.setHeader("Access-Control-Allow-Origin", "*");
 
-  //retrieve all favourites from favourites collection
+  //retrieve all history from searchnews collection
   SearchNews.find({}, 'titlenews linknews  -_id' , function (err, docs) {
      
     res.end(
